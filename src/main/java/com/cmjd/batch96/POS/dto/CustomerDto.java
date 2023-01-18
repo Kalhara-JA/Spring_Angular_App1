@@ -5,7 +5,7 @@ import lombok.*;
 //@Getter
 //@Setter
 @AllArgsConstructor
-//@NoArgsConstructor
+@NoArgsConstructor
 @Data
 public class CustomerDto {
     private String id;

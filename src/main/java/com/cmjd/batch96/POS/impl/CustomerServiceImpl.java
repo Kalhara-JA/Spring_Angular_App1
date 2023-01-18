@@ -4,6 +4,7 @@ import com.cmjd.batch96.POS.dto.CustomerDto;
 import com.cmjd.batch96.POS.entity.Customer;
 import com.cmjd.batch96.POS.repo.CustomerRepo;
 import com.cmjd.batch96.POS.service.CustomerService;
+import com.cmjd.batch96.POS.util.mapper.CustomerMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,9 +17,11 @@ public class CustomerServiceImpl implements CustomerService {
     //@Autowired
 
     private final CustomerRepo repo;
+    private CustomerMapper customerMapper;
 
-    public CustomerServiceImpl(CustomerRepo repo) {
+    public CustomerServiceImpl(CustomerRepo repo, CustomerMapper customerMapper) {
         this.repo = repo;
+        this.customerMapper = customerMapper;
     }
 
 
